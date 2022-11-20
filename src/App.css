@@ -1,38 +1,182 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200&family=Grenze+Gotisch:wght@300&family=Monoton&family=Pinyon+Script&family=Ruthie&family=Splash&family=UnifrakturMaguntia&display=swap');
+
+body{
+  background-image: url('./Assets/back3.jpg');
+}
+h1{
+  color: #360000;
+  margin: 2vw;
+  font-family: 'Monoton', cursive;
+  font-size: 2.5rem;
+}
+h2{
+  color: #360000;
+}
+.Menu_Wrapper{
+  margin: 2vw;
+}
+.menuButton{
+  background-color: #360000;
+  color: white;
+  margin: 0.5vw;
+  font-size: 1.4rem;
+  border-radius: 3px 15px 8px;
+  cursor: pointer;
+
+}
+
+
+@keyframes fall {
+  to {
+      transform: translateY(105vh);
+  }
+}
+
+
+.houseBuild {
+  position: absolute;
+  top: -70vh;
+  left: 5vw;
+  animation: fall 1s linear 1;
+  animation-fill-mode: forwards;
+  z-index: -3;
+}
+
+.houseElement{
+  width: 70vw;
+  height: 70vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.pageWrapper{
+  width: 100%;
+}
+.pageContentRight{
+  width: 45vw;
+  float: right;
+  padding: 0 5vw;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+form button{
+  width: 10vw;
+}
+
+.ourWorks {
+  display: grid;
+  margin: 5vh 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.ourWorks-workWrapper {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ourWorks-workWrapper-work {
+  border: 2px solid white;
+  width: 22vw;
+  height: 11vw;
+  border-radius: 1vh;
+  margin: 2vh auto;
+  background-size: cover;
+  background-position: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contact-form input,
+.contact-form button,
+.contact-form textArea,
+.contact-form button {
+  width: 35vw;
+  height: 6vh;
+  border-radius: 1vh;
+  margin-top: 1vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.contact-form textArea {
+  height: 20vh;
+}
+.contact-form button{
+  background-color: #360000;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.career-works {
+  display: flex;
+  justify-content: space-between;
+  margin: 3vh 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.work_content {
+  margin: 0 5vw;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.work_more {
+  color: rgb(219, 82, 82);
+  cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+  .pageContentRight{
+    width: 40vw;
+    padding: 0 5vw;
   }
 }
+@media (max-width: 1200px) {
+  .houseElement{
+    width: 50vw;
+    height: 50vh;
+  }
+  /* .pageContentRight{
+    width: 35vw;
+    padding: 0 5vw;
+  } */
+}
+@media (max-width: 900px) {
+  .pageContentRight{
+    width: 80vw;
+    padding: 0 5vw;
+  }
+    .pageWrapper{
+      margin-top: 60vh;
+    }
+    .houseElement{
+      width: 60vw;
+      height: 60vh;
+    }
+  }
+  @media (max-width: 600px) {
+    .pageContentRight{
+      width: 80vw;
+      padding: 0 5vw;
+    }
+      .pageWrapper{
+        margin-top: 60vh;
+      }
+      .houseElement{
+        width: 80vw;
+        height: 80vh;
+      }
+      .ourWorks {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+      .ourWorks-workWrapper-work {
+        border: 2px solid white;
+        width: 42vw;
+        height: 22vw;
+        border-radius: 1vh;
+      }
+    }
+
+    @media (max-width: 500px) {
+        .pageWrapper{
+          margin-top: 50vh;
+      }
+    }
